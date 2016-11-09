@@ -69,17 +69,17 @@ _house ="";
 		if ((overcast >= 0.2)  && (overcast < 0.5)) then {
 	        ExileSnowClose setDropInterval 0;
 	        ExileSnowNear setDropInterval 0;
-	        ExileSnowFar setDropInterval 0.1;//change this for snow inside buildings (0= no snow)
+	        ExileSnowFar setDropInterval 0.1;/*change this for snow inside buildings (0= no snow)*/
 		};
 		if ((overcast >= 0.5 )&& (overcast < 0.7)) then {
 	        ExileSnowClose setDropInterval 0;
 	        ExileSnowNear setDropInterval 0;
-	        ExileSnowFar setDropInterval 0.05;//change this for snow inside buildings (0= no snow)
+	        ExileSnowFar setDropInterval 0.05;/*change this for snow inside buildings (0= no snow)*/
 		};
 		if (overcast >= 0.7) then {
 	        ExileSnowClose setDropInterval 0;
 	        ExileSnowNear setDropInterval 0;
-	        ExileSnowFar setDropInterval 0.01; //change this for snow inside buildings (0= no snow)
+	        ExileSnowFar setDropInterval 0.01; /*change this for snow inside buildings (0= no snow)*/
 		};		
     };
     if !(_enablesnow) then
