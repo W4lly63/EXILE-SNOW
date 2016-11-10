@@ -13,12 +13,21 @@ private["_enableSnow","_getTempValue","_tTemp","_house"];
 _enableSnow = false;
 _house ="";
 
+KK_fnc_inHouse = {
+	lineIntersectsSurfaces [
+		getPosWorld _this, 
+		getPosWorld _this vectorAdd [0, 0, 50], 
+		_this, objNull, true, 1, "GEOM", "NONE"
+	] select 0 params ["","","","_house"];
+	if (_house isKindOf "House") exitWith {true};
+	false;
+};
 
     _getTempValue = format ["%1", [ExileClientEnvironmentTemperature, 1] call ExileClient_util_math_round];
     _tTemp = parseNumber _getTempValue;
     if ( _tTemp  <= 1) then
     {
-
+                0 setRain 0;
 		_enableSnow = true;
 		ExileSnowClose attachTo [vehicle player, [0, 4, 1]];
 		ExileSnowNear attachTo [vehicle player, [0, 4, 1.5]];
@@ -28,7 +37,7 @@ _house ="";
     if (_enableSnow ) then 
     {	
 	    if(player call KK_fnc_inHouse) exitWith {};
-	    
+	    0 setRain 0;
 	    ExileSnowClose attachTo [vehicle player, [0, 4, 1]];
 	    ExileSnowNear attachTo [vehicle player, [0, 4, 1.5]];
 	    ExileSnowFar attachTo [vehicle player, [0, 4, 2]];
@@ -55,7 +64,7 @@ _house ="";
     };
     if (_enableSnow &&  (player call KK_fnc_inHouse)) then 
     {	
-	    
+	    0 setRain 0;
 	    ExileSnowClose attachTo [vehicle player, [0, 4, 1]];
 	    ExileSnowNear attachTo [vehicle player, [0, 4, 1.5]];
 	    ExileSnowFar attachTo [vehicle player, [0, 4, 2]];
@@ -87,14 +96,6 @@ _house ="";
 	    ExileSnowFar setDropInterval 0;
     };
 
-KK_fnc_inHouse = {
-	lineIntersectsSurfaces [
-		getPosWorld _this, 
-		getPosWorld _this vectorAdd [0, 0, 50], 
-		_this, objNull, true, 1, "GEOM", "NONE"
-	] select 0 params ["","","","_house"];
-	if (_house isKindOf "House") exitWith {true};
-	false;
-};
+
 
 
