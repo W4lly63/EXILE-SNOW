@@ -18,9 +18,7 @@ _house ="";
     _tTemp = parseNumber _getTempValue;
     if ( _tTemp  <= 1) then
     {
-		0 setRain 0;
-        /*forceWeatherChange;
-        999999 setRain 0;*/
+
 		_enableSnow = true;
 		ExileSnowClose attachTo [vehicle player, [0, 4, 1]];
 		ExileSnowNear attachTo [vehicle player, [0, 4, 1.5]];
@@ -30,7 +28,7 @@ _house ="";
     if (_enableSnow ) then 
     {	
 	    if(player call KK_fnc_inHouse) exitWith {};
-	    0 setRain 0;
+	    
 	    ExileSnowClose attachTo [vehicle player, [0, 4, 1]];
 	    ExileSnowNear attachTo [vehicle player, [0, 4, 1.5]];
 	    ExileSnowFar attachTo [vehicle player, [0, 4, 2]];
@@ -57,7 +55,7 @@ _house ="";
     };
     if (_enableSnow &&  (player call KK_fnc_inHouse)) then 
     {	
-	    0 setRain 0;
+	    
 	    ExileSnowClose attachTo [vehicle player, [0, 4, 1]];
 	    ExileSnowNear attachTo [vehicle player, [0, 4, 1.5]];
 	    ExileSnowFar attachTo [vehicle player, [0, 4, 2]];
