@@ -1,7 +1,7 @@
 # EXILE-SNOW
 Snow script temperature and overcast based
 
-Temperature based (down to 1 snow --- up to 1 rain).
+Temperature based (down to 1 snow --- up to 1 no snow).
 Overcast based (change intensity based to overcast).
 No snow inside buildings .
 
