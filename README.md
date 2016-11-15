@@ -5,7 +5,7 @@ Snow script temperature and overcast based
 - Overcast based (change intensity based to overcast).
 - No snow inside buildings .
 - [removed] crichets sound and other summer sounds
-- [added] sound of winter wind based on real wind power - volume reduced inside buildings.
+- [added] sound of winter wind based on real wind power - volume level reduced inside buildings.
 
 Installation
 
