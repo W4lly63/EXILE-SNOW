@@ -9,7 +9,7 @@ Snow script temperature and overcast based
 
 Installation
 
-- Open config.cpp , search "class CfgExileCustomCode" and add this line inside class
+- Open mission\config.cpp , search "class CfgExileCustomCode" and add this line inside class
 
 ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
 
