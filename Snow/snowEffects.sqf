@@ -1,15 +1,12 @@
 /* 
-
+W4lly63
+[] execVM "snowEffects.sqf"
+//////////TODO = Blizzard effects
 */
-private ["_windStr","_windDir","_windStrCrt","_windDirCrt","_obj","_pos","_soundPath","_soundToPlay","_volumeWind","_windStrCrt","_windDirCrt","_house","_soundTime","_windSleep"];
+private ["_soundTime","_windSleep"];
 
-
-_house="";
 _soundTime = 0;
 changeWindSoundLvl = true;
-
-
-
 
 while {true} do {
 	
