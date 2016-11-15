@@ -9,6 +9,14 @@ No snow inside buildings .
 
 Installation
 
+- Open config.cpp , search "class CfgExileCustomCode" and add this line inside class
+
+ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
+
+- Copy folders Snow and sounds (if exist merge) inside mission folder.
+- Copy init.sqf (or merge) inside mission folder.
+- Open mission/description.ext and add Cfgsound class (or merge) inside description.ext downloaded
+
 
 
 
