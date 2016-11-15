@@ -1,4 +1,4 @@
-# EXILE-SNOW v.0.2 - Sounds + effects(todo)
+# EXILE-SNOW v.0.2 - Sounds + effects(TODO)
 Snow script temperature and overcast based
 
 Temperature based (down to 1 snow --- up to 1 no snow).
