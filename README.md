@@ -15,7 +15,7 @@ ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_upd
 
 - Copy folders Snow and sounds (if exist merge) inside mission folder.
 - Copy init.sqf (or merge) inside mission folder.
-- Open mission/description.ext and add Cfgsound class (or merge) inside description.ext downloaded
+- Open downloaded description.ext and add Cfgsound class (or merge) inside mission\description.ext 
 
 
 
