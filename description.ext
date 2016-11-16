@@ -1,5 +1,3 @@
-
-
 class CfgSounds
 {
 	class snowWindd {
@@ -12,9 +10,75 @@ class CfgSounds
 		sound[] = {"sounds\snowWindd.ogg", 0.2, 1};
 		titles[] = {};
 	};
-	class snowWindd3 {
-		name = "snowWindd3";
-		sound[] = {"sounds\snowWindd.ogg", 0.5, 1};
+	class Ss1 {
+		name = "Ss1";
+		sound[] = {"sounds\Voce_001.ogg", 1, 1};
 		titles[] = {};
-	};			
+	};	
+	class Ss2 {
+		name = "Ss2";
+		sound[] = {"sounds\Voce_002.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss3 {
+		name = "Ss3";
+		sound[] = {"sounds\Voce_003.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss4 {
+		name = "Ss4";
+		sound[] = {"sounds\Voce_004.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss5 {
+		name = "Ss5";
+		sound[] = {"sounds\Voce_005.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss6 {
+		name = "Ss6";
+		sound[] = {"sounds\Voce_006.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss7 {
+		name = "Ss7";
+		sound[] = {"sounds\Voce_007.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss8 {
+		name = "Ss8";
+		sound[] = {"sounds\Voce_008.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss9 {
+		name = "Ss9";
+		sound[] = {"sounds\Voce_009.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss10 {
+		name = "Ss10";
+		sound[] = {"sounds\Voce_010.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss11 {
+		name = "Ss11";
+		sound[] = {"sounds\Voce_011.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss12 {
+		name = "Ss12";
+		sound[] = {"sounds\Voce_012.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss13 {
+		name = "Ss13";
+		sound[] = {"sounds\Voce_013.ogg", 1, 1};
+		titles[] = {};
+	};		
+	class Ss14 {
+		name = "Ss14";
+		sound[] = {"sounds\Voce_014.ogg", 1, 1};
+		titles[] = {};
+	};		
 };
+
