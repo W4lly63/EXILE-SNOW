@@ -4,11 +4,11 @@ Snow script temperature and overcast based
 - Temperature based (down to 1 snow --- up to 1 no snow).
 - Overcast based (change intensity based to overcast).
 - No snow inside buildings .
-# v.0.3
+- # v.0.3
 - [added] environment sounds to wind like crack tree.
 - [solved] bucket visibility.
 - [optimisation] code.
-# v.0.2
+- # v.0.2
 - [removed] crichets sound and other summer sounds
 - [added] sound of winter wind based on real wind power - volume level reduced inside buildings.
 
