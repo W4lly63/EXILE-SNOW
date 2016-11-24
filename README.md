@@ -7,7 +7,7 @@ Snow script temperature and overcast based
 - Snow Mask system simulation.
 - # v.0.4
 - [added] Snow Mask. Snow mask system add mask in game,without player have bad visibility, with good visibility but if body temperature 
-  go to 36 or 35 or less, frosty mask glass ... in fn_settings.sqf is possible setup many option as if u want check if player have   
+  go to 36 or 35 or less, mask glass  frosty... in fn_settings.sqf is possible setup many option as if u want check if player have   
   glasses defined in array , if want mask only when raining or falling snow, or anytime ... and more for better experience..
 - # v.0.3
 - [added] environment sounds to wind like crack tree.
