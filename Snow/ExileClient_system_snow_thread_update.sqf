@@ -13,6 +13,8 @@ private["_enableSnow","_getTempValue","_tTemp","_house"];
 _enableSnow = false;
 _house ="";
 
+
+
 KK_fnc_inHouse = {
 	lineIntersectsSurfaces [
 		getPosWorld _this, 
@@ -99,5 +101,5 @@ KK_fnc_inHouse = {
 	    ExileSnowFar setDropInterval 0;
     };
 
-
+    
 
