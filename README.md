@@ -1,9 +1,14 @@
-# EXILE-SNOW v.0.3 - Sounds + effects(TODO)
+# EXILE-SNOW v.0.4 - Sounds + effects + SnowMask
 Snow script temperature and overcast based
 
 - Temperature based (down to 1 snow --- up to 1 no snow).
 - Overcast based (change intensity based to overcast).
 - No snow inside buildings .
+- Snow Mask system simulation.
+- # v.0.4
+- [added] Snow Mask. Snow mask system add mask in game,without player have bad visibility, with good visibility but if body temperature 
+  go to 36 or 35 or less, frosty mask glass ... in fn_settings.sqf is possible setup many option as if u want check if player have   
+  glasses defined in array , if want mask only when raining or falling snow, or anytime ... and more for better experience..
 - # v.0.3
 - [added] environment sounds to wind like crack tree.
 - [solved] bucket visibility.
@@ -18,9 +23,10 @@ Installation
 
 ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
 
-- Copy folders Snow and sounds (if exist merge) inside mission folder.
+- Copy folders Snow ,sounds and textures (if exist merge) inside mission folder.
 - Copy init.sqf (or merge) inside mission folder.
-- Open downloaded description.ext and add Cfgsound class (or merge) inside mission\description.ext 
+- Open downloaded description.ext and add RscTitles class and Cfgsound class (or merge) inside mission\description.ext 
+- if you use statusbar like [RG]Salutesh bar, join class  RscTitles as defined in statusbar instructions.
 
 
 
