@@ -1,4 +1,4 @@
-# EXILE-SNOW v.0.4 - Sounds + effects + SnowMask
+# EXILE-SNOW v.0.5 - Sounds + effects + SnowMask
 Snow script temperature and overcast based
 
 - Temperature based (down to 1 snow --- up to 1 no snow).
@@ -6,6 +6,9 @@ Snow script temperature and overcast based
 - No snow inside buildings .
 - Snow Mask system simulation.
 - configurable options :snow\fn_settings.sqf
+- # v.0.5
+- [added] New wind and environment sounds, new system sound for better reality immersion.
+- [optimisation] snow mask code.
 - # v.0.4
 - [added] Snow Mask. Snow mask system add mask in game. Without player have bad visibility, with.... good visibility but if body temperature 
   go to 36 or 35 or less, mask glass  frosty... in fn_settings.sqf is possible setup many option as if u want check if player have   
