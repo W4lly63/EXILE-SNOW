@@ -28,6 +28,7 @@ Installation
 ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
 
 - Copy folders Snow ,sounds and textures (if exist merge) inside mission folder.
+- Copy CfgAmbSounds.hpp, CfgSnowGui.hpp and CfgSnowWind.hpp inside root mission directory
 - Copy init.sqf (or merge) inside mission folder.
 - Open downloaded description.ext and add RscTitles class and Cfgsound class (or merge) inside mission\description.ext 
 - if you use statusbar like [RG]Salutesh bar, join class  RscTitles as defined in statusbar instructions.
