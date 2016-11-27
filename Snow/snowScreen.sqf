@@ -1,5 +1,5 @@
 WY_fnc_SnowMask = {
-	
+
 private["_strVar","_str","_display","_ctrl","_w","_h","_x","_y","_snowBodyTemp","_bodyTemp","_getTempValue","_tTemp","_pos","_gogglesArray","_gogglesNamesArray","_noGlassesText","_textToView","_playerHaveGlasses","_checkRainSnow","_gogglesImagesArray","_imgSelected","_imgSelTxt","_strText","_noCheckBackpack","_selectFog","_startT","_changeTemp"];
 
 disableSerialization;
@@ -30,47 +30,49 @@ WY_fnc_Glasses = {
 	_tTemp = _this select 1;
 	_ctrl = _this select 2;
 	_bodyTemp = _this select 3;
-	
+
         if (_snowBodyTemp != _bodyTemp || _changeTemp != _tTemp) then {
     	    if(_snowBodyTemp >= 37) then {
       		    _ctrl ctrlsetText "textures\snowM0.paa";
      		    _ctrl ctrlSetPosition _pos;
-     		    _ctrl ctrlcommit 0;	  
+     		    _ctrl ctrlcommit 0;
 		    };
     	    if((_snowBodyTemp <= 36) && (_tTemp < 2)) then {
       		    _ctrl ctrlsetText "textures\snowM1.paa";
       		    _ctrl ctrlSetPosition _pos;
-      		    _ctrl ctrlcommit 0;	  
+      		    _ctrl ctrlcommit 0;
 		    };
     	    if((_snowBodyTemp <= 35) && (_tTemp < 2)) then {
       		    _ctrl ctrlsetText "textures\snowM2.paa";
       		    _ctrl ctrlSetPosition _pos;
-      		    _ctrl ctrlcommit 0;	  
+      		    _ctrl ctrlcommit 0;
 		    };
     	    if((_snowBodyTemp <= 36) && (_tTemp >= 2)) then {
       		    _ctrl ctrlsetText "textures\snowM4.paa";
       		    _ctrl ctrlSetPosition _pos;
-      		    _ctrl ctrlcommit 0;	  
+      		    _ctrl ctrlcommit 0;
 		    };
     	    if((_snowBodyTemp <= 35) && (_tTemp >= 2)) then {
       		    _ctrl ctrlsetText "textures\snowM3.paa";
       		    _ctrl ctrlSetPosition _pos;
-      		    _ctrl ctrlcommit 0;	  
-		    };			
+      		    _ctrl ctrlcommit 0;
+		    };
 	    };
-			
+
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////display other images//////////////////////////////////////////////////////
 
 WY_fnc_OtherImg = {
-    _imgPath = _this select 0;
-    _ctrl ctrlsetText _imgPath;
+	disableSerialization;
+    _ctrl = _this select 0;
+	_pos = _this select 1;
+    _ctrl ctrlsetText "";
     _ctrl ctrlSetPosition _pos;
-    _ctrl ctrlcommit 0;			
+    _ctrl ctrlcommit 0;
 	_bodyTemp = 0;
-	_checkRainSnow = true;	
+	_checkRainSnow = true;
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,9 +93,9 @@ WY_fnc_CheckGlassesType = {
 		};
 	    if(_noCheckBackpack) then {
 		    if(_x in (vestItems _unit + uniformItems _unit  +  assignedItems _unit)) exitWith {_allInventory = true;}
-		};		
+		};
 	}forEach _ggArray;
-	
+
 	if(goggles _unit in _ggArray || _allInventory ) exitWith {true};
 	false;
 };
@@ -121,7 +123,7 @@ while {true} do {
 	_snowBodyTemp = round (ExileClientPlayerAttributes select 5);
 	_playerHaveGlasses = [player,_gogglesArray,_noCheckBackpack] call WY_fnc_CheckGlassesType;
 	_selectFog = selectRandom ["textures\fogM1.paa"];
-	
+
 	if (!_useCheckGlasses) then {
 		if(!_glassesOnlySnow) then {
         	0 = [_snowBodyTemp,_tTemp,_ctrl,_bodyTemp] call WY_fnc_Glasses;
@@ -133,73 +135,57 @@ while {true} do {
 				_checkRainSnow = false;
 			};
 	    	if(overcast < 0.2) then {
-     			_ctrl ctrlsetText "";
-      	   	    _ctrl ctrlSetPosition _pos;
-      			_ctrl ctrlcommit 0;			
-				_bodyTemp = 0;
-				_checkRainSnow = true;	
-			};   			
-		};	
+               [_ctrl,_pos] spawn WY_fnc_OtherImg;
+			};
+		};
 	};
 	if (_useCheckGlasses) then {
 	    if(_playerHaveGlasses) then {
 			if(!_glassesOnlySnow) then {
-        		0 = [_snowBodyTemp,_tTemp,_ctrl,_bodyTemp] call WY_fnc_Glasses;	
-                _checkRainSnow = false;				
+        		0 = [_snowBodyTemp,_tTemp,_ctrl,_bodyTemp] call WY_fnc_Glasses;
+                _checkRainSnow = false;
 			};
 			if(_glassesOnlySnow) then {
 	    		if(overcast >= 0.2) then {
-            		0 = [_snowBodyTemp,_tTemp,_ctrl,_bodyTemp] call WY_fnc_Glasses;		
-                    _checkRainSnow = false;					
-				};        
+            		0 = [_snowBodyTemp,_tTemp,_ctrl,_bodyTemp] call WY_fnc_Glasses;
+                    _checkRainSnow = false;
+				};
 			};
 			if(_glassesOnlySnow) then {
 	    		if(overcast < 0.2) then {
-     		       _ctrl ctrlsetText "";
-      	           _ctrl ctrlSetPosition _pos;
-      		       _ctrl ctrlcommit 0;			
-			       _bodyTemp = 0;
-			       _checkRainSnow = true;				
-				};        
-			};							
+                    [_ctrl,_pos] spawn WY_fnc_OtherImg;
+				};
+			};
 		};
 	    if(!_playerHaveGlasses) then {
 			//////////////////////view type of glasses required  and pictures/////////////////////////////////
 			if(diag_tickTime < _startT) then {
 				_strText = ["SNOW GLASSES REQUIRED...searching : ", lineBreak];
 				for "_i" from 0 to ((count _gogglesArray) -1) do {
-					_strText pushBack (_gogglesNamesArray select _i); 
+					_strText pushBack (_gogglesNamesArray select _i);
 					_imgSelected = (_gogglesImagesArray select _i);
 					_imgSelTxt = parseText format["<img size='2'  image='%1'/>", _imgSelected];
 					_strText pushBack _imgSelTxt;
-					_strText pushBack lineBreak;  
+					_strText pushBack lineBreak;
 		    	};
 				hint composeText _strText;
 			};
 			//////////////////////////////////////////////////////////////////////////////////////
-     		_ctrl ctrlsetText _selectFog;
+			_ctrl ctrlsetText "textures\fogM1.paa";
       	    _ctrl ctrlSetPosition _pos;
-      		_ctrl ctrlcommit 0;			
+      		_ctrl ctrlcommit 0;
 			_bodyTemp = 0;
-			_checkRainSnow = true;	
+			_checkRainSnow = true;
 		};
-	};   
+	};
 	if(visibleMap) then {
-     		_ctrl ctrlsetText "";
-      	    _ctrl ctrlSetPosition _pos;
-      		_ctrl ctrlcommit 0;			
-			_bodyTemp = 0;
-			_checkRainSnow = true;	
+			[_ctrl,_pos] spawn WY_fnc_OtherImg;
 	};
 	if (ExileClientGasMaskVisible) then {
-     		_ctrl ctrlsetText "";
-      	    _ctrl ctrlSetPosition _pos;
-      		_ctrl ctrlcommit 0;			
-			_bodyTemp = 0;
-			_checkRainSnow = true;	    
+			[_ctrl,_pos] spawn WY_fnc_OtherImg;
 	};
 	uiSleep 2;
-	
+
 	if(!_checkRainSnow) then {
 		_bodyTemp = _snowBodyTemp;
 	};
@@ -207,12 +193,12 @@ while {true} do {
 	uiSleep 2;
 };
 (true);
-	
+
 };
 
 #include "fn_settings.sqf"
 
 if(_maskOn) then {
-	 
+
      0 = [_glassesOnlySnow,_useCheckGlasses,_gogglesArray,_noCheckBackpack] call WY_fnc_SnowMask;
 };
