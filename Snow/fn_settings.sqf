@@ -1,5 +1,9 @@
 ////////////////////////////settings//////////////////////////////////////
 
+/////////////////////////////snow/////////////////////////////////////////////////////////////////////
+
+_hardSnowFall          = false;                            // activate hard snow falling when overcast up to 0.9
+
 ///////////////////////environment effects///////////////////////////////////////////////////////////
 _windOn                = true;                            // activate/deactivate wind true/false
 _wn                    = 10;                              // number of wind sound files in sounds folder   --- this number need to be equal to number of files in folder or get error
