@@ -27,6 +27,8 @@ Snow script temperature and overcast based
 
 Installation
 
+- Enable Exile Snow inside config.cpp \ class yourMassionName and setup temperature with some value down to 1 grades
+- Set "Thunderstorm"  in  ExileserverConfig as weather. (optional)
 - Open mission\config.cpp , search "class CfgExileCustomCode" and add this line inside class
 
 ExileClient_system_snow_thread_update = "Snow\ExileClient_system_snow_thread_update.sqf";
