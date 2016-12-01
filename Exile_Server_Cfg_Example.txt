@@ -1,5 +1,5 @@
 /*
-Credits:  - Razor77 - dayzgreywolf.
+Credits:  - Razor77 - dayzgreywolf.-
 */
 
 Base temperature must be 1 or less for snow (else it's rain). To do this, edit your mission PBO's config.cpp:
