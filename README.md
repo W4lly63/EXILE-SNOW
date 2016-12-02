@@ -1,11 +1,16 @@
-# EXILE-SNOW v.0.5.1 - Sounds + effects + SnowMask
+# EXILE-SNOW v.0.6 - Sounds + effects + SnowMask
 Snow script temperature and overcast based
 
 - Temperature based (down to 1 snow --- up to 1 no snow).
 - Overcast based (change intensity based to overcast).
 - No snow inside buildings .
 - Snow Mask system simulation.
+- Environment sounds effects. 
 - configurable options :snow\fn_settings.sqf
+- # v.0.6.0
+- [added] Snow footsteps crunching sound.(fn_settings.sqf - can setup volume of steps and/or audible distance)
+- [updated] Environment sound system . now sound of cities are separated by forest/village and sea too.
+- [added] New Sounds.
 - # v.0.5.1
  - [added] Option for activate more snow fall when overcast up to 0.9
  - [optimisation]  no snow inside buildings
