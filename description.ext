@@ -1,13 +1,14 @@
 class RscTitles
 {
-#include "CfgSnowGui.hpp"
+#include "Snow\CfgSnowGui.hpp"
 };
 
 
 class CfgSounds
 {
-#include "CfgAmbSounds.hpp"
-#include "CfgWindSounds.hpp"
+#include "Snow\CfgAmbSounds.hpp"
+#include "Snow\CfgWindSounds.hpp"
+#include "Snow\CfgPlayerSounds.hpp"
 };
 
 
