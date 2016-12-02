@@ -1,7 +1,7 @@
 if (hasInterface) then {
-   []execVM "Snow\snowEffects.sqf"; 
-   []execVM "Snow\snowScreen.sqf";
+    #include "Snow\fn_init.sqf"
 };
+
 
 waitUntil {time > 0};
 enableEnvironment false;
