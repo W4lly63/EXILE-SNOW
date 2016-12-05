@@ -56,8 +56,8 @@ WY_fnc_SnowFootSteps = {
             _sleepR = 0.3;
           };
           if(stance player == "STAND") then {
-            _sleepL = 0.3;
-           _sleepR = 0.4;
+            _sleepL = 0.4;
+           _sleepR = 0.3;
           };
         };
         if(_speedP > 15)then {
