@@ -44,7 +44,7 @@ WY_fnc_envirWind ={
         _windNumb = floor random _wn;
 	    _windSelected = format ["wn%1",_windNumb];
 	    _windLowSelected = format ["wnl%1",_windNumb];
-    	objSP = "Land_Bucket_F" createVehicleLocal position player;
+    	objSP = "Land_PenBlack_F" createVehicleLocal position player;
     	objSP attachTo [player,[_xxx,_yyy,0]];
     	objSP hideObject true;
     	objSP allowDamage false;
