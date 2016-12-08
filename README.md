@@ -1,4 +1,4 @@
-# EXILE-SNOW v.0.6.1 - Sounds + effects + SnowMask
+# EXILE-SNOW v.0.6.5 - Sounds + effects + SnowMask
 Snow script temperature and overcast based
 
 - Temperature based (down to 1 snow --- up to 1 no snow).
@@ -7,6 +7,9 @@ Snow script temperature and overcast based
 - Snow Mask system simulation.
 - Environment sounds effects. 
 - configurable options :snow\fn_settings.sqf
+- # v.0.6.5
+- [changed] snow footsteps sound code , now based to mplayer movements.
+- [added] snow prone sound.
 - # v.0.6.1
 - [added] New folder inside Snow folder with winds and environment sounds level 0.8 and 0.6. Instruction inside folder readme.
 - # v.0.6.0
