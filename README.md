@@ -8,7 +8,7 @@ Snow script temperature and overcast based
 - Environment sounds effects. 
 - configurable options :snow\fn_settings.sqf
 - # v.0.6.5
-- [changed] snow footsteps sound code , now based to mplayer movements.
+- [changed] snow footsteps sound code , now based on the player movements.
 - [added] snow prone sound.
 - # v.0.6.1
 - [added] New folder inside Snow folder with winds and environment sounds level 0.8 and 0.6. Instruction inside folder readme.
